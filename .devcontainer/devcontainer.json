@@ -1,0 +1,25 @@
+{
+  "name": "Python 3",
+
+  // 公式イメージだけを利用する場合
+  // "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+
+  // 自分で構築する Dockerfile を作る場合
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/poetry:1": {}
+  },
+
+  "workspaceFolder": "/workspaces/vscode-book-r2-python",
+  "forwardPorts": [8000],
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": ["ms-python.python", "humao.rest-client"]
+    }
+  },
+  "postCreateCommand": "poetry install",
+}
